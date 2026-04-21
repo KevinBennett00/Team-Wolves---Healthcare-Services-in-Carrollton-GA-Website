@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Carrollton Healthcare</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="navbar">
+    <div class="container">
+      <a href="../index.html" class="logo">Carrollton Healthcare</a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="../index.html">Home</a>
+        <a href="providers.html">Find a Provider</a>
+        <a href="emergency.html">Emergency Services</a>
+        <a href="faq.html">FAQ</a>
+        <a href="accessibility.html">Accessibility</a>
+        <a href="contact.html" class="active">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow">Contact</p>
+        <h1>Contact us</h1>
+        <p>If you need help using the site or are not sure where to start, send a message here.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container contact-grid">
+        <div class="contact-card">
+          <h2>Get in touch</h2>
+          <p><strong>Phone:</strong> (678) 790-8163</p>
+          <p><strong>Email:</strong> info@carrolltonhealthcare.com</p>
+          <p><strong>Address:</strong> Carrollton, GA 30117</p>
+        </div>
+
+        <div class="contact-card">
+          <h2>Send us a message</h2>
+          <form class="contact-form" action="success.html">
+            <label for="full-name">Full Name</label>
+            <input id="full-name" type="text" placeholder="Enter your name" required>
+
+            <label for="email-address">Email Address</label>
+            <input id="email-address" type="email" placeholder="Enter your email" required>
+
+            <label for="phone-number">Phone Number</label>
+            <input id="phone-number" type="tel" placeholder="Enter your phone number">
+
+            <label for="subject">Subject</label>
+            <input id="subject" type="text" placeholder="What do you need help with?" required>
+
+            <label for="message">Message</label>
+            <textarea id="message" placeholder="Type your message here" required></textarea>
+
+            <button type="submit" class="submit-btn">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-columns">
+      <div>
+        <h3>Carrollton Healthcare</h3>
+        <p>A simple healthcare directory for people in Carrollton, Georgia.</p>
+      </div>
+
+      <div>
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="providers.html">Find a Provider</a></li>
+          <li><a href="emergency.html">Emergency Services</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Contact Information</h3>
+        <p>Email: info@carrolltonhealthcare.com</p>
+        <p>Phone: (678) 790-8163</p>
+      </div>
+    </div>
+  </footer>
+
+  <button id="accessibilityToggle" class="accessibility-toggle" aria-label="Open accessibility settings" aria-expanded="false">⚙</button>
+
+  <div id="accessibilityPanel" class="accessibility-panel" aria-label="Accessibility settings">
+    <h2>Accessibility Settings</h2>
+
+    <div class="accessibility-section">
+      <h3>Color Scheme</h3>
+      <div class="option-row">
+        <button class="option-btn" data-theme="default">Standard</button>
+        <button class="option-btn" data-theme="high-contrast">High Contrast</button>
+        <button class="option-btn" data-theme="dark-mode">Dark Mode</button>
+        <button class="option-btn" data-theme="warm-mode">Warm Tones</button>
+      </div>
+    </div>
+
+    <div class="accessibility-section">
+      <h3>Font Size</h3>
+      <div class="option-row">
+        <button class="option-btn" data-font="normal">Normal</button>
+        <button class="option-btn" data-font="large">Large</button>
+        <button class="option-btn" data-font="xl">Extra Large</button>
+      </div>
+    </div>
+
+    <button id="resetAccessibility" class="option-btn reset-btn">Reset to Defaults</button>
+  </div>
+
+  <script src="../javascript/script.js"></script>
+</body>
+</html>
