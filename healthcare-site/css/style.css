@@ -384,6 +384,66 @@ a:hover {
   grid-template-columns: 1fr;
 }
 
+.page-intro {
+  max-width: 720px;
+  color: var(--muted);
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+
+.page-intro.flush-top {
+  margin-top: 0;
+}
+
+.page-intro.tight-below {
+  margin-bottom: 0;
+}
+
+.page-intro.follow-list {
+  margin-top: 12px;
+  margin-bottom: 0;
+}
+
+.provider-search-actions {
+  margin-top: 8px;
+  margin-bottom: 12px;
+}
+
+.provider-side {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 12px;
+  justify-content: center;
+}
+
+.provider-side .action-row {
+  justify-content: flex-end;
+}
+
+.info-panel ul {
+  margin: 10px 0 0;
+  padding-left: 1.2em;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.info-panel li + li {
+  margin-top: 8px;
+}
+
+.section-heading {
+  font-size: 2.3rem;
+  margin-bottom: 8px;
+  letter-spacing: -0.02em;
+}
+
+.subsection-title {
+  font-size: 1.4rem;
+  margin-bottom: 6px;
+  color: var(--text);
+}
+
 .feature-card,
 .info-panel,
 .notice-box,
@@ -771,6 +831,11 @@ a:hover {
   .provider-card .badge,
   .room-card .action-row {
     grid-column: 2;
+  }
+
+  .provider-side {
+    grid-column: 1 / -1;
+    align-items: flex-start;
   }
 
   .home-image-card img {

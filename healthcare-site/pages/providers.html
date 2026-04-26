@@ -3,35 +3,173 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Providers</title>
+  <title>Find a Provider | Carrollton Healthcare</title>
   <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
 
-<header class="navbar">
-  <div class="container">
-    <a href="../index.html" class="logo">Carrollton Healthcare</a>
-    <nav class="nav-links">
-      <a href="../index.html">Home</a>
-      <a href="providers.html">Find a Provider</a>
-      <a href="emergency.html">Emergency Services</a>
-      <a href="faq.html">FAQ</a>
-      <a href="accessibility.html">Accessibility</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </div>
-</header>
-
-<main></main>
-
-<footer class="footer">
-  <div class="container footer-columns">
-    <div>
-      <h3>Carrollton Healthcare</h3>
-      <p>A simple healthcare directory for people in Carrollton, Georgia.</p>
+  <header class="navbar">
+    <div class="container">
+      <a href="../index.html" class="logo">Carrollton Healthcare</a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="../index.html">Home</a>
+        <a href="providers.html" class="active" aria-current="page">Find a Provider</a>
+        <a href="emergency.html">Emergency Services</a>
+        <a href="faq.html">FAQ</a>
+        <a href="accessibility.html">Accessibility</a>
+        <a href="contact.html">Contact</a>
+      </nav>
     </div>
-  </div>
-</footer>
+  </header>
 
+  <main id="main-content">
+    <section class="page-hero" aria-labelledby="provider-page-title">
+      <div class="container">
+        <p class="eyebrow">Directory</p>
+        <h1 id="provider-page-title">Find a Provider</h1>
+        <p>Search local providers and compare options that match your care needs in Carrollton and nearby.</p>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="search-providers">
+      <div class="container">
+        <h2 class="section-heading" id="search-providers">Search providers</h2>
+        <p class="page-intro">Filter by specialty, insurance, and location. The search runs in your browser on the sample listings below. Replace the data and script with a real API when you are ready.</p>
+        <form id="provider-search-form" class="search-form" role="search" aria-label="Provider search" action="providers.html" method="get" novalidate>
+          <div>
+            <label for="filter-specialty">Specialty</label>
+            <input id="filter-specialty" name="specialty" type="search" placeholder="e.g. Family medicine, cardiology" autocomplete="off" enterkeyhint="search">
+          </div>
+          <div>
+            <label for="filter-insurance">Insurance</label>
+            <input id="filter-insurance" name="insurance" type="search" placeholder="e.g. Blue Cross, Aetna" autocomplete="off" enterkeyhint="search">
+          </div>
+          <div>
+            <label for="filter-location">Location</label>
+            <input id="filter-location" name="location" type="search" placeholder="Carrollton, GA" value="Carrollton, GA" autocomplete="off" enterkeyhint="search">
+          </div>
+          <div>
+            <span class="visually-hidden" id="search-fields-label">Filter fields</span>
+            <button type="submit" class="submit-btn" aria-label="Search providers using filters above" aria-describedby="search-fields-label">Search</button>
+          </div>
+        </form>
+        <p class="page-intro" id="provider-search-status" role="status" aria-live="polite" aria-atomic="true"></p>
+        <p class="section-links provider-search-actions">
+          <button type="button" id="clear-provider-filters" class="simple-btn">Clear filters</button>
+        </p>
+
+        <div id="provider-no-results" class="notice-box" hidden>
+          <p><strong>No providers match your filters.</strong> Try a shorter keyword, remove one field, or clear filters to see all sample providers.</p>
+        </div>
+
+        <div id="provider-results" class="provider-list" role="list">
+          <article class="provider-card" role="listitem" data-specialty="cardiology" data-insurance="blue cross aetna medicare" data-location="carrollton georgia">
+            <div class="provider-photo" aria-hidden="true">EC</div>
+            <div class="provider-details">
+              <h2>Dr. Emily Carter</h2>
+              <p class="meta">Specialty: Cardiology</p>
+              <p class="meta">Insurance: Blue Cross, Aetna, Medicare</p>
+              <p class="meta">Patient rating: 4.8 / 5 (sample)</p>
+            </div>
+            <div class="provider-side">
+              <span class="badge accepting">Accepting new patients</span>
+              <div class="action-row">
+                <a href="provider.html" class="btn-primary">View profile</a>
+                <a href="contact.html" class="simple-btn">Contact</a>
+                <a href="contact.html" class="simple-btn fill">Book</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="provider-card" role="listitem" data-specialty="family medicine" data-insurance="united cigna" data-location="carrollton georgia">
+            <div class="provider-photo" aria-hidden="true">MN</div>
+            <div class="provider-details">
+              <h2>Dr. Michael Nguyen</h2>
+              <p class="meta">Specialty: Family medicine</p>
+              <p class="meta">Insurance: UnitedHealthcare, Cigna</p>
+              <p class="meta">Patient rating: 4.6 / 5 (sample)</p>
+            </div>
+            <div class="provider-side">
+              <span class="badge limited">Not accepting new patients</span>
+              <div class="action-row">
+                <a href="provider.html" class="btn-primary">View profile</a>
+                <a href="contact.html" class="simple-btn">Contact</a>
+                <a href="contact.html" class="simple-btn fill">Book</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="provider-card" role="listitem" data-specialty="pediatrics" data-insurance="most major plans" data-location="carrollton georgia">
+            <div class="provider-photo" aria-hidden="true">SJ</div>
+            <div class="provider-details">
+              <h2>Dr. Sarah James</h2>
+              <p class="meta">Specialty: Pediatrics</p>
+              <p class="meta">Insurance: Most major plans; call to confirm</p>
+              <p class="meta">Patient rating: 4.9 / 5 (sample)</p>
+            </div>
+            <div class="provider-side">
+              <span class="badge accepting">Accepting new patients</span>
+              <div class="action-row">
+                <a href="provider.html" class="btn-primary">View profile</a>
+                <a href="contact.html" class="simple-btn">Contact</a>
+                <a href="contact.html" class="simple-btn fill">Book</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-columns">
+      <div>
+        <h3>Carrollton Healthcare</h3>
+        <p>A simple healthcare directory for people in Carrollton, Georgia.</p>
+      </div>
+      <div>
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="providers.html">Find a Provider</a></li>
+          <li><a href="emergency.html">Emergency Services</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Contact Information</h3>
+        <p>Email: info@carrolltonhealthcare.com</p>
+        <p>Phone: (678) 790-8163</p>
+      </div>
+    </div>
+  </footer>
+
+  <button type="button" id="accessibilityToggle" class="accessibility-toggle" aria-label="Open accessibility settings" aria-expanded="false">⚙</button>
+
+  <div id="accessibilityPanel" class="accessibility-panel" aria-label="Accessibility settings">
+    <h2>Accessibility Settings</h2>
+    <div class="accessibility-section">
+      <h3>Color Scheme</h3>
+      <div class="option-row">
+        <button type="button" class="option-btn" data-theme="default">Standard</button>
+        <button type="button" class="option-btn" data-theme="high-contrast">High Contrast</button>
+        <button type="button" class="option-btn" data-theme="dark-mode">Dark Mode</button>
+        <button type="button" class="option-btn" data-theme="warm-mode">Warm Tones</button>
+      </div>
+    </div>
+    <div class="accessibility-section">
+      <h3>Font Size</h3>
+      <div class="option-row">
+        <button type="button" class="option-btn" data-font="normal">Normal</button>
+        <button type="button" class="option-btn" data-font="large">Large</button>
+        <button type="button" class="option-btn" data-font="xl">Extra Large</button>
+      </div>
+    </div>
+    <button type="button" id="resetAccessibility" class="option-btn reset-btn">Reset to Defaults</button>
+  </div>
+
+  <script src="../javascript/script.js"></script>
+  <script src="../javascript/providers.js"></script>
 </body>
 </html>

@@ -3,35 +3,161 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Emergency</title>
+  <title>Emergency Services | Carrollton Healthcare</title>
   <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
 
-<header class="navbar">
-  <div class="container">
-    <a href="../index.html" class="logo">Carrollton Healthcare</a>
-    <nav class="nav-links">
-      <a href="../index.html">Home</a>
-      <a href="providers.html">Find a Provider</a>
-      <a href="emergency.html">Emergency Services</a>
-      <a href="faq.html">FAQ</a>
-      <a href="accessibility.html">Accessibility</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </div>
-</header>
-
-<main></main>
-
-<footer class="footer">
-  <div class="container footer-columns">
-    <div>
-      <h3>Carrollton Healthcare</h3>
-      <p>A simple healthcare directory for people in Carrollton, Georgia.</p>
+  <header class="navbar">
+    <div class="container">
+      <a href="../index.html" class="logo">Carrollton Healthcare</a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="../index.html">Home</a>
+        <a href="providers.html">Find a Provider</a>
+        <a href="emergency.html" class="active" aria-current="page">Emergency Services</a>
+        <a href="faq.html">FAQ</a>
+        <a href="accessibility.html">Accessibility</a>
+        <a href="contact.html">Contact</a>
+      </nav>
     </div>
-  </div>
-</footer>
+  </header>
 
+  <main id="main-content">
+    <section class="page-hero" aria-labelledby="emergency-page-title">
+      <div class="container">
+        <p class="eyebrow">Urgent and emergency care</p>
+        <h1 id="emergency-page-title">Emergency services</h1>
+        <p>Know when to call 911, when urgent care is a better fit, and where to find emergency care near Carrollton. This page is for education only—if you are unsure, call 911 or seek care in person.</p>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="emergency-911">
+      <div class="container">
+        <div class="notice-box" role="status">
+          <h2 class="subsection-title" id="emergency-911">In life-threatening emergencies, call 911 immediately</h2>
+          <p>Do not use the contact form, email, or this website for time-sensitive or emergency help. If you or someone else may be in danger, call 911 or go to the nearest emergency room.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="when-911">
+      <div class="container">
+        <h2 class="section-heading" id="when-911">When to call 911</h2>
+        <p class="page-intro">Use emergency services (911) for conditions that can cause lasting harm or are immediately life-threatening.</p>
+        <div class="info-grid">
+          <div class="info-panel">
+            <h3 class="subsection-title">Common 911 reasons</h3>
+            <ul>
+              <li>Chest pain, pressure, or trouble breathing</li>
+              <li>Signs of stroke (sudden weakness, confusion, slurred speech, face drooping)</li>
+              <li>Severe bleeding that does not stop with pressure</li>
+              <li>Serious injury, bad burns, or loss of consciousness</li>
+            </ul>
+          </div>
+          <div class="info-panel">
+            <h3 class="subsection-title">Urgent care guidance (non–life-threatening)</h3>
+            <p class="page-intro flush-top">Urgent care can handle many same-day needs when you are not in an emergency. Examples include:</p>
+            <ul>
+              <li>Minor sprains, small cuts, and simple fractures</li>
+              <li>Fever, earaches, and flu symptoms when you cannot reach your regular doctor</li>
+              <li>After-hours help for non-severe issues</li>
+              <li>Non-severe rashes, infections, and minor animal bites (when not severe)</li>
+            </ul>
+            <p class="page-intro follow-list">If you are not sure, call 911 or the closest ER—when in doubt, err on the side of emergency care.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="nearby-er">
+      <div class="container">
+        <h2 class="section-heading" id="nearby-er">Nearby emergency care (Carrollton area)</h2>
+        <p class="page-intro">Sample listings to match a directory layout—replace with current addresses, hours, and phone numbers from the facility or your organization.</p>
+        <div class="rooms-grid">
+          <article class="room-card">
+            <div class="room-icon" aria-hidden="true">ER</div>
+            <div>
+              <h3>Carrollton area hospital – Emergency</h3>
+              <p class="meta">100 Example Health Way, Carrollton, GA 30117</p>
+              <p class="meta">Full-service emergency department (sample)</p>
+            </div>
+            <div class="action-row">
+              <a class="simple-btn" href="https://www.google.com/maps/search/emergency+room+Carrollton+GA" rel="noopener noreferrer">Open map (search)</a>
+            </div>
+          </article>
+          <article class="room-card">
+            <div class="room-icon" aria-hidden="true">+</div>
+            <div>
+              <h3>Local urgent care (example)</h3>
+              <p class="meta">200 Example Plaza, Carrollton, GA 30117</p>
+              <p class="meta">Walk-in; hours and services vary (sample)</p>
+            </div>
+            <div class="action-row">
+              <a class="simple-btn" href="contact.html">Get help choosing care</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="commitment-box">
+          <h2 class="subsection-title">Not sure where to start?</h2>
+          <p>Our <a class="inline-link" href="faq.html">FAQ</a> and <a class="inline-link" href="contact.html">contact</a> pages can help with general questions. For any emergency, use 911 or go to the ER—do not wait on a website reply.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-columns">
+      <div>
+        <h3>Carrollton Healthcare</h3>
+        <p>A simple healthcare directory for people in Carrollton, Georgia.</p>
+      </div>
+      <div>
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="providers.html">Find a Provider</a></li>
+          <li><a href="emergency.html">Emergency Services</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Contact Information</h3>
+        <p>Email: info@carrolltonhealthcare.com</p>
+        <p>Phone: (678) 790-8163</p>
+      </div>
+    </div>
+  </footer>
+
+  <button type="button" id="accessibilityToggle" class="accessibility-toggle" aria-label="Open accessibility settings" aria-expanded="false">⚙</button>
+
+  <div id="accessibilityPanel" class="accessibility-panel" aria-label="Accessibility settings">
+    <h2>Accessibility Settings</h2>
+    <div class="accessibility-section">
+      <h3>Color Scheme</h3>
+      <div class="option-row">
+        <button type="button" class="option-btn" data-theme="default">Standard</button>
+        <button type="button" class="option-btn" data-theme="high-contrast">High Contrast</button>
+        <button type="button" class="option-btn" data-theme="dark-mode">Dark Mode</button>
+        <button type="button" class="option-btn" data-theme="warm-mode">Warm Tones</button>
+      </div>
+    </div>
+    <div class="accessibility-section">
+      <h3>Font Size</h3>
+      <div class="option-row">
+        <button type="button" class="option-btn" data-font="normal">Normal</button>
+        <button type="button" class="option-btn" data-font="large">Large</button>
+        <button type="button" class="option-btn" data-font="xl">Extra Large</button>
+      </div>
+    </div>
+    <button type="button" id="resetAccessibility" class="option-btn reset-btn">Reset to Defaults</button>
+  </div>
+
+  <script src="../javascript/script.js"></script>
 </body>
 </html>
