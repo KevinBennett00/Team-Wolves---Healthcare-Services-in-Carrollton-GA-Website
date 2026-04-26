@@ -24,6 +24,12 @@
     return t.includes(q);
   }
 
+  /** If query is set, it must match the primary data field and/or the doctor's name. */
+  function matchesFieldOrName(primary, name, query) {
+    if (!query || !String(query).trim()) return true;
+    return hasMatch(primary, query) || hasMatch(name, query);
+  }
+
   function filter() {
     const qSpec = inputSpecialty ? inputSpecialty.value : "";
     const qIns = inputInsurance ? inputInsurance.value : "";
@@ -31,11 +37,14 @@
     let visible = 0;
 
     cards.forEach((card) => {
+      const name = card.dataset.name || "";
       const spec = card.dataset.specialty || "";
       const ins = card.dataset.insurance || "";
       const loc = card.dataset.location || "";
       const show =
-        hasMatch(spec, qSpec) && hasMatch(ins, qIns) && hasMatch(loc, qLoc);
+        matchesFieldOrName(spec, name, qSpec) &&
+        matchesFieldOrName(ins, name, qIns) &&
+        matchesFieldOrName(loc, name, qLoc);
       card.hidden = !show;
       if (show) visible += 1;
     });
@@ -100,7 +109,7 @@
     clearBtn.addEventListener("click", function () {
       if (inputSpecialty) inputSpecialty.value = "";
       if (inputInsurance) inputInsurance.value = "";
-      if (inputLocation) inputLocation.value = "Carrollton, GA";
+      if (inputLocation) inputLocation.value = "";
       history.replaceState(null, "", currentPageName());
       filter();
     });

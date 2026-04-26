@@ -36,6 +36,16 @@
       <div class="container">
         <h2 class="section-heading" id="search-providers">Search providers</h2>
         <p class="page-intro">Filter by specialty, insurance, and location. The search runs in your browser on the sample listings below. Replace the data and script with a real API when you are ready.</p>
+        <div class="commitment-box" aria-label="Sample search ideas">
+          <h3 class="subsection-title">What to type to see results</h3>
+          <p>All names and details are <strong>sample data</strong> for this project. Searches are partial matches. Try:</p>
+          <ul class="search-hint-list">
+            <li><strong>Specialty:</strong> <em>cardiology</em>, <em>dermatology</em>, <em>orthopedics</em>, <em>pediatrics</em>, <em>psychiatry</em>, or <em>obgyn</em> — or part of a doctor&rsquo;s <strong>name</strong> (e.g. <em>Patel</em>, <em>Nguyen</em>)</li>
+            <li><strong>Insurance:</strong> <em>Blue Cross</em>, <em>Humana</em>, <em>Medicaid</em>, <em>Kaiser</em>, <em>Medicare</em>, or <em>Aetna</em> (a doctor&rsquo;s <strong>name</strong> works in this field too.)</li>
+            <li><strong>Location:</strong> leave blank to see <strong>all 8</strong> samples, or type <em>Carrollton</em> (6 listings), <em>Villa Rica</em> (1), or <em>Bowdon</em> (1) — you can also try a <strong>last name</strong> here to find someone.</li>
+          </ul>
+          <p class="page-intro flush-top">A search term matches a provider if it lines up with their <strong>specialty</strong>, <strong>insurance</strong>, <strong>location</strong>, or <strong>name</strong> (full or partial). All three boxes use the same rules.</p>
+        </div>
         <form id="provider-search-form" class="search-form" role="search" aria-label="Provider search" action="providers.html" method="get" novalidate>
           <div>
             <label for="filter-specialty">Specialty</label>
@@ -47,7 +57,7 @@
           </div>
           <div>
             <label for="filter-location">Location</label>
-            <input id="filter-location" name="location" type="search" placeholder="Carrollton, GA" value="Carrollton, GA" autocomplete="off" enterkeyhint="search">
+            <input id="filter-location" name="location" type="search" placeholder="e.g. Carrollton, Villa Rica, Bowdon (optional)" value="" autocomplete="off" enterkeyhint="search">
           </div>
           <div>
             <span class="visually-hidden" id="search-fields-label">Filter fields</span>
@@ -64,7 +74,7 @@
         </div>
 
         <div id="provider-results" class="provider-list" role="list">
-          <article class="provider-card" role="listitem" data-specialty="cardiology" data-insurance="blue cross aetna medicare" data-location="carrollton georgia">
+          <article class="provider-card" role="listitem" data-name="emily carter" data-specialty="cardiology" data-insurance="blue cross aetna medicare" data-location="carrollton georgia">
             <div class="provider-photo" aria-hidden="true">EC</div>
             <div class="provider-details">
               <h2>Dr. Emily Carter</h2>
@@ -82,7 +92,7 @@
             </div>
           </article>
 
-          <article class="provider-card" role="listitem" data-specialty="family medicine" data-insurance="united cigna" data-location="carrollton georgia">
+          <article class="provider-card" role="listitem" data-name="michael nguyen" data-specialty="family medicine" data-insurance="united cigna" data-location="carrollton georgia">
             <div class="provider-photo" aria-hidden="true">MN</div>
             <div class="provider-details">
               <h2>Dr. Michael Nguyen</h2>
@@ -100,12 +110,102 @@
             </div>
           </article>
 
-          <article class="provider-card" role="listitem" data-specialty="pediatrics" data-insurance="most major plans" data-location="carrollton georgia">
+          <article class="provider-card" role="listitem" data-name="sarah james" data-specialty="pediatrics" data-insurance="most major plans" data-location="carrollton georgia">
             <div class="provider-photo" aria-hidden="true">SJ</div>
             <div class="provider-details">
               <h2>Dr. Sarah James</h2>
               <p class="meta">Specialty: Pediatrics</p>
               <p class="meta">Insurance: Most major plans; call to confirm</p>
+              <p class="meta">Patient rating: 4.9 / 5 (sample)</p>
+            </div>
+            <div class="provider-side">
+              <span class="badge accepting">Accepting new patients</span>
+              <div class="action-row">
+                <a href="provider.html" class="btn-primary">View profile</a>
+                <a href="contact.html" class="simple-btn">Contact</a>
+                <a href="contact.html" class="simple-btn fill">Book</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="provider-card" role="listitem" data-name="lisa park" data-specialty="dermatology" data-insurance="humana tricare" data-location="carrollton georgia">
+            <div class="provider-photo" aria-hidden="true">LP</div>
+            <div class="provider-details">
+              <h2>Dr. Lisa Park</h2>
+              <p class="meta">Specialty: Dermatology</p>
+              <p class="meta">Insurance: Humana, Tricare</p>
+              <p class="meta">Patient rating: 4.7 / 5 (sample)</p>
+            </div>
+            <div class="provider-side">
+              <span class="badge accepting">Accepting new patients</span>
+              <div class="action-row">
+                <a href="provider.html" class="btn-primary">View profile</a>
+                <a href="contact.html" class="simple-btn">Contact</a>
+                <a href="contact.html" class="simple-btn fill">Book</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="provider-card" role="listitem" data-name="robert hill" data-specialty="orthopedics" data-insurance="medicare medicaid" data-location="villa rica georgia">
+            <div class="provider-photo" aria-hidden="true">RH</div>
+            <div class="provider-details">
+              <h2>Dr. Robert Hill</h2>
+              <p class="meta">Specialty: Orthopedics</p>
+              <p class="meta">Insurance: Medicare, Medicaid</p>
+              <p class="meta">Patient rating: 4.5 / 5 (sample)</p>
+            </div>
+            <div class="provider-side">
+              <span class="badge accepting">Accepting new patients</span>
+              <div class="action-row">
+                <a href="provider.html" class="btn-primary">View profile</a>
+                <a href="contact.html" class="simple-btn">Contact</a>
+                <a href="contact.html" class="simple-btn fill">Book</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="provider-card" role="listitem" data-name="ana morales" data-specialty="obgyn gynecology womens health" data-insurance="kaiser blue cross" data-location="carrollton georgia">
+            <div class="provider-photo" aria-hidden="true">AM</div>
+            <div class="provider-details">
+              <h2>Dr. Ana Morales</h2>
+              <p class="meta">Specialty: OB/GYN</p>
+              <p class="meta">Insurance: Kaiser, Blue Cross</p>
+              <p class="meta">Patient rating: 4.8 / 5 (sample)</p>
+            </div>
+            <div class="provider-side">
+              <span class="badge limited">Not accepting new patients</span>
+              <div class="action-row">
+                <a href="provider.html" class="btn-primary">View profile</a>
+                <a href="contact.html" class="simple-btn">Contact</a>
+                <a href="contact.html" class="simple-btn fill">Book</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="provider-card" role="listitem" data-name="kevin brooks" data-specialty="internal medicine" data-insurance="aetna" data-location="carrollton georgia">
+            <div class="provider-photo" aria-hidden="true">KB</div>
+            <div class="provider-details">
+              <h2>Dr. Kevin Brooks</h2>
+              <p class="meta">Specialty: Internal medicine</p>
+              <p class="meta">Insurance: Aetna (sample narrow network)</p>
+              <p class="meta">Patient rating: 4.4 / 5 (sample)</p>
+            </div>
+            <div class="provider-side">
+              <span class="badge accepting">Accepting new patients</span>
+              <div class="action-row">
+                <a href="provider.html" class="btn-primary">View profile</a>
+                <a href="contact.html" class="simple-btn">Contact</a>
+                <a href="contact.html" class="simple-btn fill">Book</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="provider-card" role="listitem" data-name="priya patel" data-specialty="psychiatry mental health" data-insurance="medicaid peach state" data-location="bowdon georgia">
+            <div class="provider-photo" aria-hidden="true">PP</div>
+            <div class="provider-details">
+              <h2>Dr. Priya Patel</h2>
+              <p class="meta">Specialty: Psychiatry and therapy referrals</p>
+              <p class="meta">Insurance: Medicaid, Peach State Health Plan</p>
               <p class="meta">Patient rating: 4.9 / 5 (sample)</p>
             </div>
             <div class="provider-side">
