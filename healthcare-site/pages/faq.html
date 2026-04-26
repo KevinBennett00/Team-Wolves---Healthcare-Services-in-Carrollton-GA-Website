@@ -3,10 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FAQ</title>
+  <title>FAQ | Carrollton Healthcare</title>
   <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
+
+<a href="#main" class="skip-link">Skip to main content</a>
 
 <header class="navbar">
   <div class="container">
@@ -15,14 +17,83 @@
       <a href="../index.html">Home</a>
       <a href="providers.html">Find a Provider</a>
       <a href="emergency.html">Emergency Services</a>
-      <a href="faq.html">FAQ</a>
+      <a href="faq.html" class="active">FAQ</a>
       <a href="accessibility.html">Accessibility</a>
       <a href="contact.html">Contact</a>
     </nav>
   </div>
 </header>
 
-<main></main>
+<section class="page-hero">
+  <div class="container">
+    <h1>Frequently Asked Questions</h1>
+    <p>Find answers to common questions about our healthcare services</p>
+  </div>
+</section>
+
+<main id="main" class="section">
+  <div class="container">
+    <div class="faq-list">
+
+      <details class="faq-item">
+        <summary>How do I schedule an appointment?</summary>
+        <div class="faq-answer">
+          <p>You can schedule an appointment by clicking the "Schedule Appointment" button on any provider's profile page. You can also call the provider's office directly using the phone number listed on their profile.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>What insurance plans do you accept?</summary>
+        <div class="faq-answer">
+          <p>Our providers accept a variety of insurance plans including Blue Cross Blue Shield, Aetna, UnitedHealthcare, Cigna, Humana, Medicare, and Medicaid. Please check each provider's profile to see which specific insurance plans they accept.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Do you offer telehealth services?</summary>
+        <div class="faq-answer">
+          <p>Yes! Many of our providers offer telehealth appointments. Look for the "Telehealth Available" badge on provider profiles. Telehealth appointments allow you to consult with your provider from the comfort of your home.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>What should I bring to my first appointment?</summary>
+        <div class="faq-answer">
+          <p>Please bring a valid photo ID, your insurance card, a list of current medications, and any relevant medical records from previous providers. If you're a new patient, you may also need to arrive 15 minutes early to complete paperwork.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>How can I access my medical records?</summary>
+        <div class="faq-answer">
+          <p>You can request your medical records by contacting your provider's office directly. Many providers also offer patient portals where you can access your records online 24/7.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>What is your cancellation policy?</summary>
+        <div class="faq-answer">
+          <p>We ask that you provide at least 24 hours notice if you need to cancel or reschedule an appointment. This allows us to offer the time slot to other patients who may need care.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Do you see walk-in patients?</summary>
+        <div class="faq-answer">
+          <p>Walk-in availability varies by provider and location. We recommend calling ahead to check availability. For urgent care needs, we can often accommodate same-day appointments.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>How do I get a prescription refill?</summary>
+        <div class="faq-answer">
+          <p>Contact your provider's office directly to request a prescription refill. Many providers also offer prescription refill requests through their patient portal.</p>
+        </div>
+      </details>
+
+    </div>
+  </div>
+</main>
 
 <footer class="footer">
   <div class="container footer-columns">
@@ -30,8 +101,56 @@
       <h3>Carrollton Healthcare</h3>
       <p>A simple healthcare directory for people in Carrollton, Georgia.</p>
     </div>
+    <div>
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="providers.html">Find a Provider</a></li>
+        <li><a href="emergency.html">Emergency Services</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Contact Information</h3>
+      <p>Email: info@carrolltonhealthcare.com</p>
+      <p>Phone: (678) 790-8163</p>
+    </div>
   </div>
 </footer>
 
+<button
+  id="accessibilityToggle"
+  class="accessibility-toggle"
+  aria-label="Accessibility settings"
+  aria-expanded="false">
+  ⚙️
+</button>
+
+<div id="accessibilityPanel" class="accessibility-panel" role="region" aria-label="Accessibility settings">
+  <h2>Accessibility Settings</h2>
+
+  <div class="accessibility-section">
+    <h3>Color Theme</h3>
+    <div class="option-row">
+      <button class="option-btn" data-theme="default">Default</button>
+      <button class="option-btn" data-theme="dark-mode">Dark</button>
+      <button class="option-btn" data-theme="warm-mode">Warm</button>
+      <button class="option-btn" data-theme="high-contrast">High Contrast</button>
+    </div>
+  </div>
+
+  <div class="accessibility-section">
+    <h3>Font Size</h3>
+    <div class="option-row">
+      <button class="option-btn" data-font="normal">Normal</button>
+      <button class="option-btn" data-font="large">Large</button>
+      <button class="option-btn" data-font="xl">Extra Large</button>
+    </div>
+  </div>
+
+  <button id="resetAccessibility" class="btn reset-btn">Reset to Defaults</button>
+</div>
+
+<script src="../javascript/script.js"></script>
 </body>
 </html>

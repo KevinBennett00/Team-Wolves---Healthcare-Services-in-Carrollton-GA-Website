@@ -3,10 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Accessibility</title>
+  <title>Accessibility | Carrollton Healthcare</title>
   <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
+
+<a href="#main" class="skip-link">Skip to main content</a>
 
 <header class="navbar">
   <div class="container">
@@ -16,13 +18,86 @@
       <a href="providers.html">Find a Provider</a>
       <a href="emergency.html">Emergency Services</a>
       <a href="faq.html">FAQ</a>
-      <a href="accessibility.html">Accessibility</a>
+      <a href="accessibility.html" class="active">Accessibility</a>
       <a href="contact.html">Contact</a>
     </nav>
   </div>
 </header>
 
-<main></main>
+<section class="page-hero">
+  <div class="container">
+    <h1>Accessibility Features</h1>
+    <p>We're committed to making healthcare accessible for everyone</p>
+  </div>
+</section>
+
+<main id="main" class="section">
+  <div class="container">
+
+    <div class="commitment-box">
+      <h2>Our Accessibility Commitment</h2>
+      <p>Carrollton Healthcare is committed to ensuring digital accessibility for people with disabilities. We are continually improving the user experience for everyone and applying the relevant accessibility standards to achieve these goals.</p>
+      <p style="margin-top: 12px;">This website conforms to WCAG 2.1 Level AA standards to provide an accessible experience for all users.</p>
+    </div>
+
+    <div class="info-panel">
+      <h3>Accessibility Settings</h3>
+      <p>Click the gear icon (⚙️) in the bottom right corner to access our accessibility settings:</p>
+      <ul>
+        <li><strong>Color Themes:</strong> Choose from Default, Dark Mode, Warm Tones, or High Contrast to suit your visual preferences</li>
+        <li><strong>Font Size:</strong> Adjust text size to Normal, Large, or Extra Large for better readability</li>
+        <li><strong>Persistent Settings:</strong> Your preferences are saved in your browser for future visits</li>
+      </ul>
+    </div>
+
+    <div class="info-panel">
+      <h3>Keyboard Navigation</h3>
+      <p>Our website is fully navigable using only a keyboard:</p>
+      <ul>
+        <li><strong>Tab:</strong> Move forward through interactive elements</li>
+        <li><strong>Shift + Tab:</strong> Move backward through interactive elements</li>
+        <li><strong>Enter:</strong> Activate links and buttons</li>
+        <li><strong>Skip to Content:</strong> Press Tab when the page loads to reveal a "Skip to main content" link</li>
+      </ul>
+    </div>
+
+    <div class="info-panel">
+      <h3>Screen Reader Support</h3>
+      <p>Our website is optimized for screen readers with proper ARIA labels, semantic HTML, and descriptive text. We've tested compatibility with popular screen readers including JAWS, NVDA, and VoiceOver.</p>
+    </div>
+
+    <div class="info-panel">
+      <h3>Additional Features</h3>
+      <ul>
+        <li>Clear focus indicators for keyboard navigation</li>
+        <li>High contrast text and backgrounds for readability</li>
+        <li>Descriptive link text and button labels</li>
+        <li>Alternative text for all images</li>
+        <li>Consistent navigation across all pages</li>
+        <li>Mobile-friendly responsive design</li>
+      </ul>
+    </div>
+
+    <div class="info-panel">
+      <h3>Physical Accessibility</h3>
+      <p>Our healthcare facilities are designed to be accessible to all patients:</p>
+      <ul>
+        <li>Wheelchair accessible entrances and exam rooms</li>
+        <li>Accessible parking spaces</li>
+        <li>Elevators in multi-story buildings</li>
+        <li>Braille and tactile signage</li>
+        <li>Sign language interpreters available upon request</li>
+        <li>Assistive listening devices</li>
+      </ul>
+    </div>
+
+    <div class="info-panel">
+      <h3>Feedback</h3>
+      <p>We welcome your feedback on the accessibility of this website. If you encounter any accessibility barriers or have suggestions for improvement, please contact us at <a href="mailto:accessibility@carrolltonhealthcare.com" class="inline-link">accessibility@carrolltonhealthcare.com</a> or call <a href="tel:6787908163" class="inline-link">(678) 790-8163</a>.</p>
+    </div>
+
+  </div>
+</main>
 
 <footer class="footer">
   <div class="container footer-columns">
@@ -30,8 +105,56 @@
       <h3>Carrollton Healthcare</h3>
       <p>A simple healthcare directory for people in Carrollton, Georgia.</p>
     </div>
+    <div>
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="providers.html">Find a Provider</a></li>
+        <li><a href="emergency.html">Emergency Services</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Contact Information</h3>
+      <p>Email: info@carrolltonhealthcare.com</p>
+      <p>Phone: (678) 790-8163</p>
+    </div>
   </div>
 </footer>
 
+<button
+  id="accessibilityToggle"
+  class="accessibility-toggle"
+  aria-label="Accessibility settings"
+  aria-expanded="false">
+  ⚙️
+</button>
+
+<div id="accessibilityPanel" class="accessibility-panel" role="region" aria-label="Accessibility settings">
+  <h2>Accessibility Settings</h2>
+
+  <div class="accessibility-section">
+    <h3>Color Theme</h3>
+    <div class="option-row">
+      <button class="option-btn" data-theme="default">Default</button>
+      <button class="option-btn" data-theme="dark-mode">Dark</button>
+      <button class="option-btn" data-theme="warm-mode">Warm</button>
+      <button class="option-btn" data-theme="high-contrast">High Contrast</button>
+    </div>
+  </div>
+
+  <div class="accessibility-section">
+    <h3>Font Size</h3>
+    <div class="option-row">
+      <button class="option-btn" data-font="normal">Normal</button>
+      <button class="option-btn" data-font="large">Large</button>
+      <button class="option-btn" data-font="xl">Extra Large</button>
+    </div>
+  </div>
+
+  <button id="resetAccessibility" class="btn reset-btn">Reset to Defaults</button>
+</div>
+
+<script src="../javascript/script.js"></script>
 </body>
 </html>
